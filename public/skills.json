@@ -1,0 +1,8 @@
+[
+  { "name": "HTML", "level": 90, "icon": "html" },
+  { "name": "CSS", "level": 85, "icon": "css" },
+  { "name": "JavaScript", "level": 80, "icon": "js" },
+  { "name": "React", "level": 75, "icon": "react" },
+  { "name": "Tailwind CSS", "level": 80, "icon": "tailwind" },
+  { "name": "Firebase", "level": 70, "icon": "firebase" }
+]

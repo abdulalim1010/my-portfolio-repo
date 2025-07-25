@@ -1,37 +1,33 @@
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import heroImage from '../../assets/hero.jfif'
-const Hero = () => {
-  return (
-    <div className="hero min-h-screen bg-base-100">
-      <div className="hero-content flex-col lg:flex-row-reverse">
-        {/* Profile Image */}
-        <img
-          src={heroImage}
-          className="max-w-sm rounded-lg shadow-2xl"
-          alt="Profile"
-        />
+import { motion } from "framer-motion";
+import heroImage from '../../assets/hero.jfif';
 
-        {/* Text Content */}
-        <div>
-          <h1 className="text-4xl font-bold">Hi, I'm Alim</h1>
-          <p className="py-3 text-xl text-gray-600">A Frontend Developer & Learner</p>
-          <p className="mb-4 max-w-md">
-            I love building responsive, beautiful websites using React, Tailwind & Firebase.
-          </p>
-          <div className="flex gap-3">
-            <a href="/contact" className="btn btn-primary">Hire Me</a>
-            <a href="/cv.pdf" className="btn btn-outline btn-secondary">Download CV</a>
-          </div>
-
-          {/* Social icons */}
-          <div className="mt-4 flex gap-4 text-2xl">
-            <a href="https://linkedin.com" target="_blank"><FaLinkedin /></a>
-            <a href="https://github.com" target="_blank"><FaGithub /></a>
-          </div>
-        </div>
-      </div>
+const Hero = () => (
+  <motion.section
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-primary text-white px-4"
+  >
+    <div className="max-w-3xl text-center md:text-left md:mr-10">
+      <h1 className="text-6xl font-bold mb-4">Hi, I'm Alim</h1>
+      <p className="text-xl mb-8">
+        Frontend Developer building responsive, beautiful websites with React & Tailwind.
+      </p>
+      <motion.a
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        href="/contact"
+        className="inline-block bg-secondary px-6 py-3 rounded-lg text-white font-semibold shadow-lg"
+      >
+        Hire Me
+      </motion.a>
     </div>
-  );
-};
+    <img
+      src={heroImage}
+      alt="Alim Profile"
+      className="w-72 rounded-lg shadow-lg mt-10 md:mt-0"
+    />
+  </motion.section>
+);
 
 export default Hero;
