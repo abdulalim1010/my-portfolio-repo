@@ -13,7 +13,7 @@ const ContactForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post("http://localhost:3000/contact", data);
+      const res = await axios.post("http://localhost:3000/contacts", data);
       if (res.data.insertedId) {
         toast.success("Message sent successfully!");
         reset();
@@ -29,7 +29,7 @@ const ContactForm = () => {
       <Toaster />
       <div className="card w-full max-w-xl shadow-2xl bg-base-100">
         <div className="card-body">
-          <h2 className="text-2xl font-bold text-center mb-4">Contact Us</h2>
+          <h2 className="text-2xl font-bold text-center mb-4">Contact With Me</h2>
 
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* Name */}

@@ -4,7 +4,9 @@ import {
 } from "react-router";
 import RoutLayout from "../../roootlyout/RoutLayout";
 import Home from "../../components/home/Home";
-import ContactForm from "../../components/contact/ContactForm";
+
+import AdminContacts from "../admin/AdminContacts";
+import ContactPage from "../../components/contact/ContactPage";
 
 
 export const router = createBrowserRouter([
@@ -17,8 +19,14 @@ export const router = createBrowserRouter([
         Component:Home
       },
       {
-        path: 'contact',
-        Component:ContactForm
+        path: "contact",
+        Component:ContactPage
+
+      },
+      
+      {
+        path: "/admin/contacts",
+        Component:AdminContacts
       }
       
    ]

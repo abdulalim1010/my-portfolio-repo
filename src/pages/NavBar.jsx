@@ -35,6 +35,14 @@ const NavBar = () => {
           Contact
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/admin/contacts"
+          className={({ isActive }) => isActive ? "text-primary font-semibold" : ""}
+        >
+         my dashboard
+        </NavLink>
+      </li>
     </>
   );
 
