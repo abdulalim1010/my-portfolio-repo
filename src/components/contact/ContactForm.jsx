@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import { FaPaperPlane } from "react-icons/fa";
 
 const ContactForm = () => {
   const {
@@ -25,75 +26,72 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-base-200 flex items-center justify-center p-4">
+    <div className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
       <Toaster />
-      <div className="card w-full max-w-xl shadow-2xl bg-base-100">
-        <div className="card-body">
-          <h2 className="text-2xl font-bold text-center mb-4">Contact With Me</h2>
+      <div className="w-full max-w-2xl bg-white bg-opacity-90 backdrop-blur-md rounded-2xl shadow-xl p-8">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">📬 Contact With Me</h2>
 
-          <form onSubmit={handleSubmit(onSubmit)}>
-            {/* Name */}
-            <div className="form-control mb-4">
-              <label className="label">
-                <span className="label-text">Name</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="input input-bordered"
-                {...register("name", { required: "Name is required" })}
-              />
-              {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
-            </div>
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          {/* Name */}
+          <div>
+            <label className="block text-gray-700 font-semibold mb-1">Name</label>
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full input input-bordered"
+              {...register("name", { required: "Name is required" })}
+            />
+            {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
+          </div>
 
-            {/* Email */}
-            <div className="form-control mb-4">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="email"
-                placeholder="you@example.com"
-                className="input input-bordered"
-                {...register("email", { required: "Email is required" })}
-              />
-              {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
-            </div>
+          {/* Email */}
+          <div>
+            <label className="block text-gray-700 font-semibold mb-1">Email</label>
+            <input
+              type="email"
+              placeholder="you@example.com"
+              className="w-full input input-bordered"
+              {...register("email", { required: "Email is required" })}
+            />
+            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
+          </div>
 
-            {/* Phone */}
-            <div className="form-control mb-4">
-              <label className="label">
-                <span className="label-text">Phone Number</span>
-              </label>
-              <input
-                type="tel"
-                placeholder="+8801XXXXXXXXX"
-                className="input input-bordered"
-                {...register("phone", { required: "Phone is required" })}
-              />
-              {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
-            </div>
+          {/* Phone */}
+          <div>
+            <label className="block text-gray-700 font-semibold mb-1">Phone Number</label>
+            <input
+              type="tel"
+              placeholder="+8801XXXXXXXXX"
+              className="w-full input input-bordered"
+              {...register("phone", { required: "Phone is required" })}
+            />
+            {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>}
+          </div>
 
-            {/* Message */}
-            <div className="form-control mb-4">
-              <label className="label">
-                <span className="label-text">Message</span>
-              </label>
-              <textarea
-                className="textarea textarea-bordered"
-                placeholder="Your message"
-                {...register("message", { required: "Message is required" })}
-              ></textarea>
-              {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
-            </div>
+          {/* Message */}
+          <div>
+            <label className="block text-gray-700 font-semibold mb-1">Message</label>
+            <textarea
+              className="w-full textarea textarea-bordered"
+              rows="4"
+              placeholder="Your message"
+              {...register("message", { required: "Message is required" })}
+            ></textarea>
+            {errors.message && (
+              <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
+            )}
+          </div>
 
-            <div className="form-control mt-6">
-              <button type="submit" className="btn btn-primary">
-                Send Message
-              </button>
-            </div>
-          </form>
-        </div>
+          {/* Submit */}
+          <div className="text-center">
+            <button
+              type="submit"
+              className="btn bg-gradient-to-r from-green-400 to-blue-500 text-white px-6 py-2 font-semibold shadow-lg hover:scale-105 transition-transform duration-200"
+            >
+              Send Message <FaPaperPlane className="ml-2" />
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );

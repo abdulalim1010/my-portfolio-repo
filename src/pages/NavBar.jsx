@@ -6,7 +6,7 @@ const NavBar = () => {
       <li>
         <NavLink
           to="/"
-          className={({ isActive }) => isActive ? "text-primary font-semibold" : ""}
+          className={({ isActive }) => isActive ? "text-primary text-xl  font-bold" : "text-xl font-semibold"}
         >
           Home
         </NavLink>
@@ -14,7 +14,7 @@ const NavBar = () => {
       <li>
         <NavLink
           to="/about"
-          className={({ isActive }) => isActive ? "text-primary font-semibold" : ""}
+          className={({ isActive }) => isActive ? "text-primary text-xl font-bold" : "text-xl font-semibold"}
         >
           About
         </NavLink>
@@ -22,7 +22,7 @@ const NavBar = () => {
       <li>
         <NavLink
           to="/projects"
-          className={({ isActive }) => isActive ? "text-primary font-semibold" : ""}
+          className={({ isActive }) => isActive ? "text-primary text-xl font-bold" : "text-xl font-semibold"}
         >
           Projects
         </NavLink>
@@ -30,7 +30,7 @@ const NavBar = () => {
       <li>
         <NavLink
           to="/contact"
-          className={({ isActive }) => isActive ? "text-primary font-semibold" : ""}
+          className={({ isActive }) => isActive ? "text-primary text-xl font-bold" : "text-xl font-semibold"}
         >
           Contact
         </NavLink>
@@ -38,7 +38,7 @@ const NavBar = () => {
       <li>
         <NavLink
           to="/admin/contacts"
-          className={({ isActive }) => isActive ? "text-primary font-semibold" : ""}
+          className={({ isActive }) => isActive ? "text-primary font-bold" : "text-xl font-semibold"}
         >
          my dashboard
         </NavLink>
@@ -47,7 +47,7 @@ const NavBar = () => {
   );
 
   return (
-    <div className="navbar bg-pink-700 max-w-7.5xl mx-auto shadow-md px-4">
+    <div className="navbar bg-pink-300 max-w-7.5xl mx-auto shadow-md px-4">
       {/* Logo / Brand */}
       <div className="navbar-start">
         <div className="dropdown">
