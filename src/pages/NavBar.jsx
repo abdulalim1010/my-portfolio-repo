@@ -81,7 +81,7 @@ const NavBar = () => {
 
       {/* Optional CTA or Theme Toggle */}
       <div className="navbar-end">
-        <a className="btn btn-sm btn-primary">Hire Me</a>
+        <NavLink to="/sign-in" className="btn btn-sm btn-primary">Hire Me</NavLink>
       </div>
     </div>
   );

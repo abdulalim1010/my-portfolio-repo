@@ -7,6 +7,8 @@ import Home from "../../components/home/Home";
 
 import AdminContacts from "../admin/AdminContacts";
 import ContactPage from "../../components/contact/ContactPage";
+import SignIn from "../authentication/SignIn";
+import SignUp from "../authentication/SignUp";
 
 
 export const router = createBrowserRouter([
@@ -27,6 +29,15 @@ export const router = createBrowserRouter([
       {
         path: "/admin/contacts",
         Component:AdminContacts
+      }
+      ,
+      {
+        path: '/sign-in',
+        Component:SignIn
+      },
+      {
+        path: "/sign-up",
+        Component:SignUp
       }
       
    ]
