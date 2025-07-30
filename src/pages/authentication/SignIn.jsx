@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import { NavLink } from "react-router";  // react-router থেকে NavLink
 import { AuthContext } from "./AuthContext";
+import GoogleLoginButton from "./GoogleLoginButton";
 
 
 const SignIn = () => {
@@ -63,8 +64,18 @@ const SignIn = () => {
             <span>Login</span> 🔓
           </button>
         </form>
+        <p className="mt-4 text-center text-black">
+               Don't have an account?{" "}
+                <NavLink
+                  to="/sign-up"
+                  className="underline font-semibold hover:text-indigo-300"
+                >
+                 Sign Up
+                </NavLink>
+        </p>
+         <GoogleLoginButton></GoogleLoginButton>
       </div>
-      <h1 className="mt-4 text-center">Don't have an account? <NavLink to="/sign-up" className="text-indigo-600 underline">Sign Up</NavLink></h1>
+
     </div>
   );
 };

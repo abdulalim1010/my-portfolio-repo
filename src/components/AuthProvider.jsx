@@ -1,4 +1,4 @@
-// src/contexts/AuthProvider.jsx
+
 import React, {   useEffect, useState } from "react";
 import {
 
@@ -6,15 +6,16 @@ import {
   signOut,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
  
 } from "firebase/auth";
- // তোমার firebase config ফাইল থেকে
-import { AuthContext } from "../pages/authentication/AuthContext";
 import { auth } from "../firebase.init";
+import { AuthContext } from "../pages/authentication/AuthContext";
+ 
 
 
-
-
+const googleProvider=new GoogleAuthProvider()
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -34,6 +35,10 @@ export const AuthProvider = ({ children }) => {
   const register = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
+  //goole
+  const signInWithGoogle = () => {
+    return signInWithPopup(auth,googleProvider)
+  }
 
   // Login user
   const login = (email, password) => {
@@ -51,6 +56,7 @@ export const AuthProvider = ({ children }) => {
     register,
     login,
     logout,
+    signInWithGoogle
   };
 
   return (
