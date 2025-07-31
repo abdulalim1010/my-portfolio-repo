@@ -2,12 +2,15 @@ import { createBrowserRouter } from "react-router";  // use react-router-dom, no
 import RoutLayout from "../../roootlyout/RoutLayout";
 import Home from "../../components/home/Home";
 
-import AdminContacts from "../admin/AdminContacts";
+
 import ContactPage from "../../components/contact/ContactPage";
 import SignIn from "../authentication/SignIn";
 import SignUp from "../authentication/SignUp";
 import Aboute from "../../components/about/Aboute";
 import DashboardLayout from "../../components/DashboardLayout";
+import DashboardMessages from "../../components/contact/DashboardMessages";
+import AllUsers from "../../components/contact/AllUsers";
+
 
 export const router = createBrowserRouter([
   {
@@ -27,7 +30,7 @@ export const router = createBrowserRouter([
         element: <Aboute />,
       },
       {
-        path: "signin",
+        path: "sign-in",
         element: <SignIn />,
       },
       {
@@ -39,9 +42,13 @@ export const router = createBrowserRouter([
         element: <DashboardLayout />,
         children: [
           {
-            path: "admin/contacts",
-            element: <AdminContacts />,
+           path: "/dashboard/messages",
+            element:<DashboardMessages/>
           },
+          {
+            path: "/dashboard/users",
+            element:<AllUsers/>
+          }
           // Add more dashboard nested routes here
         ],
       },

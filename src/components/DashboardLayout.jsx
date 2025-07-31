@@ -19,10 +19,12 @@ const DashboardLayout = () => {
         <h2 className="text-xl font-bold mb-4">Dashboard</h2>
         <ul>
           <li><a href="/dashboard/profile">Profile</a></li>
+       
           {role === "admin" && (
             <>
               <li><a href="/dashboard/users">All Users</a></li>
               <li><a href="/dashboard/articles">All Articles</a></li>
+                 <li><a href="/dashboard/messages">message</a></li>
             </>
           )}
           {role === "user" && (

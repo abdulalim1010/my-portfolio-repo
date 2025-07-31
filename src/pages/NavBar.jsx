@@ -48,19 +48,18 @@ const NavBar = () => {
         </NavLink>
       </li>
 
-      {/* Show dashboard link only if user is logged in */}
-      {user && (
+     
         <li>
           <NavLink
             to="dashboard"
             className={({ isActive }) =>
-              isActive ? "text-primary font-bold" : "text-xl font-semibold"
+              isActive ? "text-primary text-xl font-bold" : "text-xl font-semibold"
             }
           >
             My Dashboard
           </NavLink>
         </li>
-      )}
+     
     </>
   );
 
