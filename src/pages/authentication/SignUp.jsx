@@ -15,17 +15,29 @@ const SignUp = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (data) => {
-    try {
-      const userCredential = await registerUser(data.email, data.password);
-      toast.success("Registration successful!");
-      reset();
-      console.log("New user:", userCredential.user);
-      // You can redirect or do something else here if needed
-    } catch (error) {
-      toast.error(error.message);
-    }
-  };
+ const onSubmit = async (data) => {
+  try {
+    const userCredential = await registerUser(data.email, data.password); // login returns userCredential
+    const user = userCredential.user;
+
+    // Save to MongoDB (your backend)
+    await fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: user.displayName || "No Name",
+        email: user.email,
+        role: "user",
+      }),
+    });
+
+    toast.success("sign up successful!");
+    reset();
+  } catch (error) {
+    toast.error(error.message);
+  }
+};
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-200 to-indigo-200 p-4">
@@ -91,16 +103,17 @@ const SignUp = () => {
             <span>Register</span> ✅
           </button>
         </form>
-        
-      <p className="mt-4 text-center text-black">
-        Already have an account?{" "}
-        <NavLink
+          <NavLink
           to="/signin"
           className="underline font-semibold hover:text-indigo-300"
         >
+      <p className="mt-4 text-center text-black">
+        Already have an account?{" "}
+      
           Login here
-        </NavLink>
-      </p>
+        
+          </p>
+          </NavLink>
       </div>
 
     </div>

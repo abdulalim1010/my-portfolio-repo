@@ -52,7 +52,7 @@ const NavBar = () => {
       {user && (
         <li>
           <NavLink
-            to="/admin/contacts"
+            to="dashboard"
             className={({ isActive }) =>
               isActive ? "text-primary font-bold" : "text-xl font-semibold"
             }

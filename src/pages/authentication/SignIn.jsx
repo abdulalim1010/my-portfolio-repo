@@ -15,18 +15,29 @@ const SignIn = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (data) => {
-       console.log("Form data:", data);
-    try {
-      await login(data.email, data.password); // context থেকে login call
-      toast.success("Login successful!");
-      reset();
-      // redirect চাইলে এখানে করতে পারো, যেমন:
-      // navigate("/dashboard");
-    } catch (error) {
-      toast.error(error.message);
-    }
-  };
+
+const onSubmit = async (data) => {
+  try {
+    const userCredential = await login(data.email, data.password); // login returns userCredential
+    const user = userCredential.user;
+
+    // Save to MongoDB (your backend)
+    await fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: user.displayName || "No Name",
+        email: user.email,
+        role: "user",
+      }),
+    });
+
+    toast.success("Login successful!");
+    reset();
+  } catch (error) {
+    toast.error(error.message);
+  }
+};
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-600 p-4">

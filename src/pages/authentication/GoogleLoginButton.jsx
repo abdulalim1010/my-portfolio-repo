@@ -1,15 +1,29 @@
 import toast from "react-hot-toast";
 import UseAuth from "./UseAuth";
 
-const GoogleLoginButton  = () => {
-  const { signInWithGoogle } = UseAuth(); // ✅ don't use AuthContext here
+const GoogleLoginButton = () => {
+  const { signInWithGoogle } = UseAuth();
 
   const handleGoogleLogin = () => {
     signInWithGoogle()
-      .then((result) => {
-        console.log("Google Sign In successful:", result.user);
-        toast.success(`Welcome ${result.user.displayName || "User"}!`);
-        // optional: navigate('/dashboard') if needed
+      .then(async (result) => {
+        const user = result.user;
+        console.log("Google Sign In successful:", user);
+        toast.success(`Welcome ${user.displayName || "User"}!`);
+
+        // ✅ Save to MongoDB
+        await fetch("http://localhost:3000/users", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: user.displayName || "No Name",
+            email: user.email,
+            role: "user", // default
+          }),
+        });
+
+        // Optional: redirect
+        // navigate("/dashboard");
       })
       .catch((error) => {
         console.error("Error signing in with Google:", error.message);
