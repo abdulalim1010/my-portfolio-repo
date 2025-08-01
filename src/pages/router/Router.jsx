@@ -10,6 +10,7 @@ import Aboute from "../../components/about/Aboute";
 import DashboardLayout from "../../components/DashboardLayout";
 import DashboardMessages from "../../components/contact/DashboardMessages";
 import AllUsers from "../../components/contact/AllUsers";
+import Projects from "../../components/home/Projects";
 
 
 export const router = createBrowserRouter([
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
       {
         path: "about",
         element: <Aboute />,
+      },
+      {
+        path: 'projects',
+        Component:Projects
       },
       {
         path: "sign-in",

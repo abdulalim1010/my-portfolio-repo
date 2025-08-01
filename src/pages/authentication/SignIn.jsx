@@ -4,7 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { NavLink } from "react-router";  // react-router থেকে NavLink
 import { AuthContext } from "./AuthContext";
 import GoogleLoginButton from "./GoogleLoginButton";
-
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const SignIn = () => {
   const { login } = useContext(AuthContext); // context থেকে login function নেওয়া
@@ -40,10 +40,16 @@ const onSubmit = async (data) => {
 };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-600 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-indigo-200 to-purple-600 p-4">
       <Toaster />
       <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-2xl">
-        <h2 className="text-3xl font-bold text-center text-purple-700 mb-6">Sign In 🔐</h2>
+        <h2 className="text-3xl font-bold text-center text-purple-700 mb-6">Sign In 🔐<Player
+  autoplay
+  loop
+  src="https://assets4.lottiefiles.com/packages/lf20_t9gkkhz4.json"
+  style={{ height: "100px", width: "100px" }}
+></Player> </h2>
+        
         <form onSubmit={handleSubmit(onSubmit)}>
          
           {/* Email */}
@@ -86,6 +92,22 @@ const onSubmit = async (data) => {
         </p>
          <GoogleLoginButton></GoogleLoginButton>
       </div>
+  
+      <div>
+    <div className="w-full flex justify-center md:w-[400px] lg:w-[500px]">
+  <div className="hidden md:block md:w-[400px] lg:w-[500px]">
+  <Player
+    autoplay
+    loop
+    src="https://assets2.lottiefiles.com/packages/lf20_jcikwtux.json"
+    className="w-full h-auto"
+  />
+</div>
+
+</div>
+
+</div>
+
 
     </div>
   );

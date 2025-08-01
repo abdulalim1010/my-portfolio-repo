@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { FaPaperPlane } from "react-icons/fa";
+import { Player } from "@lottiefiles/react-lottie-player";
+
 
 const ContactForm = () => {
   const {
@@ -27,6 +29,13 @@ const ContactForm = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+          <Player
+  autoplay
+  loop
+  src="https://assets9.lottiefiles.com/packages/lf20_Cc8Bpg.json
+" 
+  style={{ height: "250px", width: "250px" }}
+/>
       <Toaster />
       <div className="w-full max-w-2xl bg-white bg-opacity-90 backdrop-blur-md rounded-2xl shadow-xl p-8">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">📬 Contact With Me</h2>
