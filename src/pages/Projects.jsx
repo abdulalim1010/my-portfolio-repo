@@ -1,63 +1,63 @@
 import React from "react";
-import { Player } from "@lottiefiles/react-lottie-player";
+import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Parcel Delivery App",
-    description: "A full-stack web app for managing and tracking parcel deliveries.",
-    technologies: ["React", "Firebase", "MongoDB", "Node.js"],
-    link: "https://yourprojectlink.com",
+    id: 1,
+    title: "Parcel Delivery Website",
+    description: "Full-stack app with authentication, tracking, and Stripe integration.",
+    image: "/projects/parcel.jpg",
+    link: "https://your-site.com/parcel",
   },
   {
-    title: "News Portal Website",
-    description: "A dynamic news portal with admin approval, subscriptions, and user article features.",
-    technologies: ["React", "Express", "MongoDB"],
-    link: "https://yournewsproject.com",
+    id: 2,
+    title: "News Portal",
+    description: "Dynamic news website with admin dashboard, filtering, and premium content.",
+    image: "/projects/news.jpg",
+    link: "https://your-site.com/news",
   },
   // Add more projects as needed
 ];
 
 const Projects = () => {
   return (
-    <section className="min-h-screen p-6 bg-gradient-to-b from-purple-100 to-indigo-200">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-4 text-indigo-700">My Projects 🚀</h2>
-        <p className="mb-10 text-gray-700">Some recent work I've done</p>
+    <section className="py-12 bg-white dark:bg-gray-900 transition duration-300">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-indigo-600 dark:text-indigo-400 mb-12">
+          My Projects
+        </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, idx) => (
-            <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition">
-              <h3 className="text-xl font-semibold text-purple-700 mb-2">{project.title}</h3>
-              <p className="text-gray-600 mb-3">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm"
-                  >
-                    {tech}
-                  </span>
-                ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <motion.div
+              key={project.id}
+              className="bg-white dark:bg-gray-800 shadow-lg rounded-xl overflow-hidden border dark:border-gray-700"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  {project.description}
+                </p>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline"
+                >
+                  Visit Project →
+                </a>
               </div>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700"
-              >
-                View Project 🔗
-              </a>
-            </div>
+            </motion.div>
           ))}
-        </div>
-
-        <div className="mt-16">
-          <Player
-            autoplay
-            loop
-            src="https://assets7.lottiefiles.com/packages/lf20_kdx6cani.json"
-            style={{ height: "200px", width: "200px", margin: "auto" }}
-          />
         </div>
       </div>
     </section>
