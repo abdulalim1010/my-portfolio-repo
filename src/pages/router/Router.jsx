@@ -10,8 +10,9 @@ import Aboute from "../../components/about/Aboute";
 import DashboardLayout from "../../components/DashboardLayout";
 import DashboardMessages from "../../components/contact/DashboardMessages";
 import AllUsers from "../../components/contact/AllUsers";
-import Projects from "../../components/home/Projects";
+
 import ManageProjects from "../../components/ManageProjects";
+import Projects from "../Projects";
 
 
 export const router = createBrowserRouter([
@@ -32,8 +33,9 @@ export const router = createBrowserRouter([
         element: <Aboute />,
       },
       {
-        path: 'projects',
-        Component:Projects
+        path: '/projects',
+        element:<Projects/>
+
       },
       {
         path: "sign-in",

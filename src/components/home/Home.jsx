@@ -2,9 +2,10 @@ import React from 'react';
 import Hero from './Hero';
 import About from './About';
 import Skills from './Skills';
-import Projects from './Projects';
+
 import Stats from '../Stats';
 import Services from '../Services';
+import Projects from '../../pages/Projects';
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
       <Hero />
       <About />
       <Skills />
-      <Projects />
+    <Projects/>
       <Stats />
       <Services/>
     </div>
