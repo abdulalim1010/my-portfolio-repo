@@ -11,6 +11,7 @@ import DashboardLayout from "../../components/DashboardLayout";
 import DashboardMessages from "../../components/contact/DashboardMessages";
 import AllUsers from "../../components/contact/AllUsers";
 import Projects from "../../components/home/Projects";
+import ManageProjects from "../../components/ManageProjects";
 
 
 export const router = createBrowserRouter([
@@ -53,6 +54,11 @@ export const router = createBrowserRouter([
           {
             path: "/dashboard/users",
             element:<AllUsers/>
+          },
+          {
+            path: "/dashboard/manageproject",
+            element:<ManageProjects/>
+
           }
           // Add more dashboard nested routes here
         ],

@@ -74,7 +74,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="navbar bg-pink-300 max-w-7.5xl mx-auto shadow-md px-4">
+    <div className="navbar bg-white max-w-7.5xl mx-auto shadow-md px-4">
       {/* Logo / Brand */}
       <div className="navbar-start">
         <div className="dropdown">

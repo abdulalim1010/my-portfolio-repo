@@ -1,5 +1,5 @@
 import React from "react";
-import imagehero from "../../assets/hero.jfif";
+import imagehero from "../../assets/193335434.jfif";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 const Aboute = () => {
@@ -9,7 +9,10 @@ const Aboute = () => {
         
         {/* Text Content */}
         <div className="flex-1 text-gray-800">
-          <h1 className="text-4xl font-bold text-indigo-700 mb-4">Md Abdul Alim</h1>
+          <div className="flex ">
+            <h1 className="text-4xl font-bold text-indigo-700 mb-4">Md Abdul Alim</h1>
+            <img className="w-30 h-20 rounded-full" src={imagehero} alt="" />
+         </div>
           <p className="mb-4">
             I am a Full Stack Developer with strong expertise in{" "}
             <span className="font-semibold text-purple-700">

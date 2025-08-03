@@ -14,17 +14,18 @@ const DashboardLayout = () => {
   if (!user) return <Navigate to="/sign-in" />;
 
   return (
-    <div className="flex">
+    <div className="flex  min-h-screen">
       <aside className="w-64 bg-purple-200 p-4">
         <h2 className="text-xl font-bold mb-4">Dashboard</h2>
         <ul>
           <li><a href="/dashboard/profile">Profile</a></li>
        
           {role === "admin" && (
-            <>
+            <>   
               <li><a href="/dashboard/users">All Users</a></li>
               <li><a href="/dashboard/articles">All Articles</a></li>
                  <li><a href="/dashboard/messages">message</a></li>
+                 <li><a href="/dashboard/manageproject">project</a></li>
             </>
           )}
           {role === "user" && (

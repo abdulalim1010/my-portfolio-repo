@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import logoimage from '../../assets/193335434.jfif'
 
 const About = () => {
   return (
@@ -19,7 +20,7 @@ const About = () => {
         className="flex flex-col md:flex-row items-center gap-12"
       >
         <motion.img
-          src="https://i.ibb.co/FnL1r6h/profile.png"
+          src={logoimage}
           alt="Profile"
           className="w-64 rounded-3xl shadow-2xl border-4 border-white hover:scale-105 transition-transform duration-500"
           whileHover={{ scale: 1.1 }}
@@ -29,7 +30,7 @@ const About = () => {
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.7 }}
-          className="text-lg leading-relaxed space-y-6 bg-white bg-opacity-20 rounded-xl p-8 backdrop-blur-md shadow-lg"
+          className="text-lg leading-relaxed space-y-6 bg-black bg-opacity-20 rounded-xl p-8 backdrop-blur-md shadow-lg"
         >
           <p>
             I am a passionate frontend developer with 3+ years of experience building scalable and

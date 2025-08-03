@@ -7,7 +7,7 @@ const Hero = () => (
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 1 }}
-    className="min-h-screen flex flex-col md:flex-row items-center justify-center md:justify-between bg-primary text-white px-4"
+    className="min-h-screen flex flex-col md:flex-row items-center justify-center md:justify-between bg-pink-300 text-white px-4"
   >
     {/* Text Section */}
     <div className="w-full md:w-1/2 flex flex-col items-center justify-center text-center md:pr-8">
@@ -47,7 +47,7 @@ const Hero = () => (
         initial={{ height: 0 }}
         animate={{ height: '80%' }}
         transition={{ duration: 1, ease: 'easeInOut' }}
-        className="hidden md:block absolute left-0 w-2 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 rounded-full"
+        className="hidden md:block absolute left-0 w-2 bg-gradient-to-b bg-pink-300 via-purple-500 to-pink-500 rounded-full"
       ></motion.div>
 
       {/* Image with Glowing Gradient Border & Hover Animation */}

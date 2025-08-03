@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { NavLink } from "react-router";
+import logoimage from "../../assets/193335434.jfif"
 
 const Footer = () => {
   return (
@@ -8,7 +9,10 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Branding */}
         <div className="space-y-3">
-          <h2 className="text-2xl font-bold text-white">Md Abdul Alim</h2>
+          <div className="flex">
+             <h2 className="text-2xl font-bold text-white">Md Abdul Alim</h2>
+          <img className="w-15 h-15 rounded-t-full p-3" src={logoimage} alt="" />
+         </div>
           <p className="text-gray-400 max-w-xs">
             Full Stack Developer passionate about creating seamless and beautiful web experiences.
           </p>
