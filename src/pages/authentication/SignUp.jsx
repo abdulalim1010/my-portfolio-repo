@@ -104,7 +104,7 @@ const SignUp = () => {
           </button>
         </form>
           <NavLink
-          to="/signin"
+          to="/sign-in"
           className="underline font-semibold hover:text-indigo-300"
         >
       <p className="mt-4 text-center text-black">

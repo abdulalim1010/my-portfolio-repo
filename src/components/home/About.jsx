@@ -32,15 +32,15 @@ const About = () => {
           transition={{ delay: 0.5, duration: 0.7 }}
           className="text-lg leading-relaxed space-y-6 bg-black bg-opacity-20 rounded-xl p-8 backdrop-blur-md shadow-lg"
         >
-          <p>
+          <p className="my_heading">
             I am a passionate frontend developer with 3+ years of experience building scalable and
             user-friendly web applications using React, Tailwind CSS, and Firebase.
           </p>
-          <p>
+          <p className="my_heading">
             I enjoy working in dynamic teams and always eager to learn new technologies and improve my
             skills.
           </p>
-          <p>
+          <p className="my_heading">
             When I am not coding, I love reading tech blogs and contributing to open source projects.
           </p>
         </motion.div>

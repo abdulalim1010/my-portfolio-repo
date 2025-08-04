@@ -7,7 +7,7 @@ const Hero = () => (
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 1 }}
-    className="min-h-screen flex flex-col md:flex-row items-center justify-center md:justify-between bg-pink-300 text-white px-4"
+    className="min-h-screen flex flex-col md:flex-row items-center justify-center md:justify-between bg-green-300 text-white px-4"
   >
     {/* Text Section */}
     <div className="w-full md:w-1/2 flex flex-col items-center justify-center text-center md:pr-8">

@@ -10,9 +10,14 @@ const NavBar = () => {
       <li>
         <NavLink
           to="/"
-          className={({ isActive }) =>
-            isActive ? "text-primary text-xl font-bold" : "text-xl font-semibold"
-          }
+         className={({ isActive }) =>
+  `relative text-xl font-semibold text-white px-2 py-1 
+  after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] 
+  after:w-0 after:bg-gradient-to-r after:from-pink-500 after:to-yellow-500 
+  after:transition-all after:duration-500 hover:after:w-full 
+  ${isActive ? 'after:w-full after:bg-green-500 text-white font-bold' : ''}`
+}
+
         >
           Home
         </NavLink>
@@ -20,9 +25,14 @@ const NavBar = () => {
       <li>
         <NavLink
           to="/about"
-          className={({ isActive }) =>
-            isActive ? "text-primary text-xl font-bold" : "text-xl font-semibold"
-          }
+         className={({ isActive }) =>
+  `relative text-xl font-semibold text-white px-2 py-1 
+  after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] 
+  after:w-0 after:bg-gradient-to-r after:from-pink-500 after:to-yellow-500 
+  after:transition-all after:duration-500 hover:after:w-full 
+  ${isActive ? 'after:w-full after:bg-green-500 text-white font-bold' : ''}`
+}
+
         >
           About
         </NavLink>
@@ -31,8 +41,13 @@ const NavBar = () => {
         <NavLink
           to="/projects"
           className={({ isActive }) =>
-            isActive ? "text-primary text-xl font-bold" : "text-xl font-semibold"
-          }
+  `relative text-xl font-semibold text-white px-2 py-1 
+  after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] 
+  after:w-0 after:bg-gradient-to-r after:from-pink-500 after:to-yellow-500 
+  after:transition-all after:duration-500 hover:after:w-full 
+  ${isActive ? 'after:w-full after:bg-green-500 text-white font-bold' : ''}`
+}
+
         >
           Projects
         </NavLink>
@@ -41,8 +56,13 @@ const NavBar = () => {
         <NavLink
           to="/contact"
           className={({ isActive }) =>
-            isActive ? "text-primary text-xl font-bold" : "text-xl font-semibold"
-          }
+  `relative text-xl font-semibold text-white px-2 py-1 
+  after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] 
+  after:w-0 after:bg-gradient-to-r after:from-pink-500 after:to-yellow-500 
+  after:transition-all after:duration-500 hover:after:w-full 
+  ${isActive ? 'after:w-full after:bg-green-500 text-white font-bold' : ''}`
+}
+
         >
           Contact
         </NavLink>
@@ -52,9 +72,14 @@ const NavBar = () => {
         <li>
           <NavLink
             to="dashboard"
-            className={({ isActive }) =>
-              isActive ? "text-primary text-xl font-bold" : "text-xl font-semibold"
-            }
+           className={({ isActive }) =>
+  `relative text-xl font-semibold text-white px-2 py-1 
+  after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] 
+  after:w-0 after:bg-gradient-to-r after:from-pink-500 after:to-yellow-500 
+  after:transition-all after:duration-500 hover:after:w-full 
+  ${isActive ? 'after:w-full after:bg-green-500 text-white font-bold' : ''}`
+}
+
           >
             My Dashboard
           </NavLink>
@@ -74,7 +99,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="navbar bg-white max-w-7.5xl mx-auto shadow-md px-4">
+    <div className="navbar bg-blue-700 max-w-7.5xl mx-auto shadow-md px-4">
       {/* Logo / Brand */}
       <div className="navbar-start">
         <div className="dropdown">
@@ -98,12 +123,12 @@ const NavBar = () => {
           {/* Mobile dropdown items */}
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-blue-600 rounded-box w-52"
           >
             {navItems}
           </ul>
         </div>
-        <NavLink to="/" className="text-xl font-bold text-primary">
+        <NavLink to="/" className="text-3xl font-bold text-white">
           MyPortfolio
         </NavLink>
       </div>
