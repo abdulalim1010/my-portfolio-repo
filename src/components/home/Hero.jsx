@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import heroImage from '../../assets/hero.jfif';
 import { Typewriter } from 'react-simple-typewriter';
+import HeroGreeting from "./HeroGreeting";
 
 const Hero = () => (
   <motion.section
@@ -11,7 +12,8 @@ const Hero = () => (
   >
     {/* Text Section */}
     <div className="w-full md:w-1/2 flex flex-col items-center justify-center text-center md:pr-8">
-      <h1 className="text-5xl font-bold font-heading text-primary">I'm Alim</h1>
+      <HeroGreeting/>
+      <h1 className="text-5xl font-bold font-heading text-primary">I'm Abdul Alim</h1>
       <h2 className="text-2xl md:text-3xl font-semibold text-secondary mb-6">
         <Typewriter
           words={['Full Stack Developer', 'MERN Stack Expert', 'React Developer', 'Backend Developer']}
