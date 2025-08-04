@@ -13,6 +13,9 @@ const Projects = () => {
   return (
     <section className="py-12 bg-white dark:bg-gray-900 transition duration-300 min-h-screen">
       <div className="max-w-6xl mx-auto px-4">
+        <section className="bg-gradient-to-r from-primary to-secondary text-white py-20 text-center">
+  
+</section>
         <h2 className="text-3xl md:text-4xl font-bold text-center text-indigo-600 dark:text-indigo-400 mb-12">
           My Projects
         </h2>

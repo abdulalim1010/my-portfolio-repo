@@ -11,9 +11,7 @@ const Hero = () => (
   >
     {/* Text Section */}
     <div className="w-full md:w-1/2 flex flex-col items-center justify-center text-center md:pr-8">
-      <h1 className="text-6xl md:text-6xl font-bold mb-4">
-        Hi, I'm Abdul Alim
-      </h1>
+      <h1 className="text-5xl font-bold font-heading text-primary">I'm Alim</h1>
       <h2 className="text-2xl md:text-3xl font-semibold text-secondary mb-6">
         <Typewriter
           words={['Full Stack Developer', 'MERN Stack Expert', 'React Developer', 'Backend Developer']}
@@ -25,7 +23,7 @@ const Hero = () => (
           delaySpeed={1500}
         />
       </h2>
-      <p className="text-lg md:text-xl mb-8">
+      <p className="text-lg md:text-xl my_heading mb-8">
        Passionate Full Stack Developer <br /> specializing in building <br /> responsive and interactive web applications <br /> using modern technologies like React.js, Node.js, and MongoDB.
       </p>
       <motion.a
