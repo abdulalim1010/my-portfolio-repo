@@ -54,6 +54,21 @@ const NavBar = () => {
       </li>
       <li>
         <NavLink
+          to="/education"
+          className={({ isActive }) =>
+  `relative text-xl font-semibold text-white px-2 py-1 
+  after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] 
+  after:w-0 after:bg-gradient-to-r after:from-pink-500 after:to-yellow-500 
+  after:transition-all after:duration-500 hover:after:w-full 
+  ${isActive ? 'after:w-full after:bg-green-500 text-white font-bold' : ''}`
+}
+
+        >
+          Education
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
           to="/contact"
           className={({ isActive }) =>
   `relative text-xl font-semibold text-white px-2 py-1 
@@ -69,21 +84,7 @@ const NavBar = () => {
       </li>
 
      
-        <li>
-          <NavLink
-            to="dashboard"
-           className={({ isActive }) =>
-  `relative text-xl font-semibold text-white px-2 py-1 
-  after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] 
-  after:w-0 after:bg-gradient-to-r after:from-pink-500 after:to-yellow-500 
-  after:transition-all after:duration-500 hover:after:w-full 
-  ${isActive ? 'after:w-full after:bg-green-500 text-white font-bold' : ''}`
-}
-
-          >
-            My Dashboard
-          </NavLink>
-        </li>
+      
      
     </>
   );

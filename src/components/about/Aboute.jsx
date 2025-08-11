@@ -39,7 +39,7 @@ const Aboute = () => {
 
           <button
             className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300"
-            onClick={() => window.open("/resume.pdf", "_blank")}
+            onClick={() => window.open("https://drive.google.com/file/d/19DVVj2MMgBMFfzAOzP8uWGZy-IZZT7C8/view?usp=sharing", "_blank")}
           >
             Download Resume
           </button>

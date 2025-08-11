@@ -13,6 +13,7 @@ import AllUsers from "../../components/contact/AllUsers";
 
 import ManageProjects from "../../components/ManageProjects";
 import Projects from "../Projects";
+import EducationPage from "../../components/education/EducationPage";
 
 
 export const router = createBrowserRouter([
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
         path: '/projects',
         element:<Projects/>
 
+      },
+      {
+        path: "/education",
+        Component:EducationPage
       },
       {
         path: "sign-in",
