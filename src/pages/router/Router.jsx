@@ -14,6 +14,7 @@ import AllUsers from "../../components/contact/AllUsers";
 import ManageProjects from "../../components/ManageProjects";
 import Projects from "../Projects";
 import EducationPage from "../../components/education/EducationPage";
+import Blog from "../../components/blog/Blog";
 
 
 export const router = createBrowserRouter([
@@ -42,6 +43,11 @@ export const router = createBrowserRouter([
         path: "/education",
         Component:EducationPage
       },
+      {
+        path: '/blog',
+        Component:Blog
+      }
+      ,
       {
         path: "sign-in",
         element: <SignIn />,
