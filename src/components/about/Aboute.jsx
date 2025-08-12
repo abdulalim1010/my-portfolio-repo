@@ -4,7 +4,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 
 const Aboute = () => {
   return (
-    <section className="max-w-6xl mx-auto p-8 bg-white rounded-xl shadow-lg mt-10">
+    <section className="max-w-6xl mx-auto p-8 rounded-xl shadow-lg mt-10">
       <div className="flex flex-col-reverse md:flex-row items-center gap-10">
         
         {/* Text Content */}

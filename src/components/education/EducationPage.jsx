@@ -6,7 +6,7 @@ const EducationPage = () => {
     {
       id: 1,
       title: "High School",
-      institution: "ABC High School",
+      institution: "Amantullah  High School",
       year: "2014 - 2016",
       description:
         "Completed Secondary School Certificate with a focus on Science group.",
@@ -14,7 +14,7 @@ const EducationPage = () => {
     {
       id: 2,
       title: "College",
-      institution: "XYZ College",
+      institution: "Shonapukur Shurovi College",
       year: "2016 - 2018",
       description:
         "Higher Secondary Certificate in Science with outstanding performance.",
@@ -22,10 +22,10 @@ const EducationPage = () => {
     {
       id: 3,
       title: "University",
-      institution: "University of Example",
-      year: "2018 - 2022",
+      institution: "Begum Rokye University, Rangpur",
+      year: "2020 - 2025",
       description:
-        "Bachelor’s degree in Computer Science & Engineering with strong academic achievements.",
+        "Bachelor’s degree in Electrical &  Electronic Engineering with strong academic achievements.",
     },
   ];
 
@@ -36,7 +36,7 @@ const EducationPage = () => {
           My Education
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1  gap-8">
           {educationData.map((edu) => (
             <motion.div
               key={edu.id}
