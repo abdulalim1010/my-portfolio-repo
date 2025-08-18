@@ -7,7 +7,7 @@ const useUserRole = (email) => {
 
   useEffect(() => {
     if (email) {
-      fetch(`http://localhost:3000/users/${email}`)
+      fetch(`https://my-portfolio-server-theta-ivory.vercel.app/users/${email}`)
         .then((res) => res.json())
         .then((data) => {
           setRole(data.role);

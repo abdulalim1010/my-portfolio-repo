@@ -18,7 +18,7 @@ const Footer = () => {
           </p>
           <div className="flex space-x-4 mt-4">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/abdulalim1010"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition"
@@ -27,7 +27,7 @@ const Footer = () => {
               <FaGithub size={24} />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/abdul-alim-dev/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-600 transition"

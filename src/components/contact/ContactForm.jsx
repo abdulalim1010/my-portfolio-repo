@@ -16,7 +16,7 @@ const ContactForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post("http://localhost:3000/contacts", data);
+      const res = await axios.post("https://my-portfolio-server-theta-ivory.vercel.app/contacts", data);
       if (res.data.insertedId) {
         toast.success("Message sent successfully!");
         reset();

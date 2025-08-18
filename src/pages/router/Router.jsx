@@ -15,6 +15,7 @@ import ManageProjects from "../../components/ManageProjects";
 import Projects from "../Projects";
 import EducationPage from "../../components/education/EducationPage";
 import Blog from "../../components/blog/Blog";
+import Resume from "../../components/home/Resume";
 
 
 export const router = createBrowserRouter([
@@ -48,6 +49,10 @@ export const router = createBrowserRouter([
         Component:Blog
       }
       ,
+      {
+        path: 'resume',
+        Component:Resume
+      },
       {
         path: "sign-in",
         element: <SignIn />,

@@ -5,7 +5,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/projects")
+    fetch("https://my-portfolio-server-theta-ivory.vercel.app/projects")
       .then((res) => res.json())
       .then((data) => setProjects(data));
   }, []);
@@ -23,7 +23,7 @@ const Projects = () => {
       </div>
 
       {/* Projects List */}
-      <div className="max-w-7xl mx-auto px-6 py-16 space-y-12">
+      <div className="max-w-8xl mx-auto px-5 py-7 space-y-12">
         {projects.length === 0 ? (
           <p className="text-center text-gray-500 dark:text-gray-300">
             No Projects Published Yet.
@@ -40,7 +40,7 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full md:w-1/2 h-64 object-cover"
+                className="w-full md:w-1/2 h-90 object-cover"
               />
 
               {/* Content */}

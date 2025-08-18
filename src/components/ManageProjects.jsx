@@ -21,7 +21,7 @@ const ManageProjects = () => {
   const fetchProjects = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:3000/projects");
+      const res = await fetch("https://my-portfolio-server-theta-ivory.vercel.app/projects");
       if (!res.ok) throw new Error("Failed to fetch projects");
       const data = await res.json();
       setProjects(data);
@@ -52,8 +52,8 @@ const ManageProjects = () => {
     e.preventDefault();
     const method = formData.id ? "PUT" : "POST";
     const url = formData.id
-      ? `http://localhost:3000/projects/${formData.id}`
-      : "http://localhost:3000/projects";
+      ? `https://my-portfolio-server-theta-ivory.vercel.app/projects/${formData.id}`
+      : "https://my-portfolio-server-theta-ivory.vercel.app/projects";
 
     try {
       const res = await fetch(url, {
@@ -82,7 +82,7 @@ const ManageProjects = () => {
   const handleDelete = async (id) => {
     if (!confirm("Are you sure you want to delete?")) return;
     try {
-      const res = await fetch(`http://localhost:3000/projects/${id}`, {
+      const res = await fetch(`https://my-portfolio-server-theta-ivory.vercel.app/projects/${id}`, {
         method: "DELETE",
       });
       if (!res.ok) throw new Error("Failed to delete project");
@@ -96,7 +96,7 @@ const ManageProjects = () => {
 
   const handlePublish = async (id) => {
     try {
-      const res = await fetch(`http://localhost:3000/projects/publish/${id}`, {
+      const res = await fetch(`https://my-portfolio-server-theta-ivory.vercel.app/projects/publish/${id}`, {
         method: "PUT",
       });
       if (!res.ok) throw new Error("Failed to publish project");

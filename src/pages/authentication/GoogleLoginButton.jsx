@@ -12,7 +12,7 @@ const GoogleLoginButton = () => {
         toast.success(`Welcome ${user.displayName || "User"}!`);
 
         // ✅ Save to MongoDB
-        await fetch("http://localhost:3000/users", {
+        await fetch("https://my-portfolio-server-theta-ivory.vercel.app/users", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

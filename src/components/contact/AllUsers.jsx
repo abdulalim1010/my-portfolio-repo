@@ -5,7 +5,7 @@ const AllUsers = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/users").then((res) => {
+    axios.get("https://my-portfolio-server-theta-ivory.vercel.app/users").then((res) => {
       setUsers(res.data);
     });
   }, []);

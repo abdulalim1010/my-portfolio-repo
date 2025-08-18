@@ -4,7 +4,7 @@ const DashboardMessages = () => {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/contacts")
+    fetch("https://my-portfolio-server-theta-ivory.vercel.app/contacts")
       .then((res) => res.json())
       .then((data) => setMessages(data.contacts));
   }, []);
